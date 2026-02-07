@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Downloader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        p {
+            text-align: center;
+            opacity: 0.8;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .download {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 15px 20px;
+            border-radius: 14px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: white;
+            transition: 0.25s ease;
+        }
+
+        .download:hover {
+            transform: translateY(-3px) scale(1.01);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .icon {
+            font-size: 24px;
+        }
+
+        .file-name {
+            font-size: 15px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 12px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Downloads</h1>
+    <p></p>
+
+    <a class="download" href="downloads/file1.zip" download>
+        <div class="file-info">
+            <div class="icon"></div>
+            <div class="file-name">file1.zip</div>
+        </div>
+        <div class="btn">Download</div>
+    </a>
+
+    <a class="download" href="downloads/kep.png" download>
+        <div class="file-info">
+            <div class="icon"></div>
+            <div class="file-name">kep.png</div>
+        </div>
+        <div class="btn">Download</div>
+    </a>
+
+    <a class="download" href="downloads/dokumentum.pdf" download>
+        <div class="file-info">
+            <div class="icon"></div>
+            <div class="file-name">dokumentum.pdf</div>
+        </div>
+        <div class="btn">Download</div>
+    </a>
+
+    <footer>
+        © 2026 Download Website
+    </footer>
+</div>
+
+</body>
+</html>
