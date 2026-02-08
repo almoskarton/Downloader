@@ -2,7 +2,7 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <title>Downloader</title>
+    <title>Downloader App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Font -->
@@ -15,78 +15,57 @@
 
         body {
             margin: 0;
-            min-height: 100vh;
             font-family: 'Poppins', sans-serif;
             background: #f0f2f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .container {
-            background: #ffffff;
-            border-radius: 30px;
-            padding: 30px 25px;
-            width: 100%;
-            max-width: 400px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            animation: fadeIn 0.6s ease forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 5px;
-            font-weight: 600;
             color: #333;
         }
 
-        p {
+        header {
+            background: #4facfe;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            padding: 20px;
+            color: white;
+            font-weight: 600;
+            font-size: 20px;
             text-align: center;
-            color: #666;
-            margin-bottom: 20px;
-            font-size: 14px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        main {
+            padding: 15px;
         }
 
         .download {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: #f9f9f9;
-            padding: 14px 18px;
+            background: #ffffff;
+            padding: 16px 20px;
             border-radius: 20px;
             margin-bottom: 15px;
             text-decoration: none;
             color: #333;
-            transition: all 0.25s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.2s ease;
         }
 
         .download:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
 
         .file-info {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
         }
 
         .icon {
-            font-size: 24px;
-            width: 30px;
-            height: 30px;
+            font-size: 28px;
+            width: 40px;
+            height: 40px;
             background: linear-gradient(135deg, #4facfe, #00f2fe);
-            border-radius: 8px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -94,15 +73,15 @@
         }
 
         .file-name {
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 500;
         }
 
         .btn {
             background: linear-gradient(135deg, #4facfe, #00f2fe);
-            padding: 8px 16px;
-            border-radius: 18px;
-            font-size: 13px;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-size: 14px;
             font-weight: 500;
             color: white;
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
@@ -115,29 +94,17 @@
 
         footer {
             text-align: center;
-            margin-top: 20px;
+            padding: 15px;
             font-size: 12px;
-            color: #aaa;
-        }
-
-        /* Mobilbarát kicsit nagyobb érintőterület */
-        @media (max-width: 500px) {
-            .download {
-                padding: 16px 20px;
-            }
-
-            .btn {
-                padding: 10px 18px;
-            }
+            color: #888;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Downloads</h1>
-    <p>Válassz egy fájlt a letöltéshez</p>
+<header>Downloads</header>
 
+<main>
     <a class="download" href="downloads/file1.zip" download>
         <div class="file-info">
             <div class="icon">📦</div>
@@ -154,10 +121,26 @@
         <div class="btn">Download</div>
     </a>
 
-    <footer>
-        © 2026 Download App
-    </footer>
-</div>
+    <a class="download" href="downloads/file2.pdf" download>
+        <div class="file-info">
+            <div class="icon">📄</div>
+            <div class="file-name">file2.pdf</div>
+        </div>
+        <div class="btn">Download</div>
+    </a>
+
+    <a class="download" href="downloads/song.mp3" download>
+        <div class="file-info">
+            <div class="icon">🎵</div>
+            <div class="file-name">song.mp3</div>
+        </div>
+        <div class="btn">Download</div>
+    </a>
+</main>
+
+<footer>
+    © 2026 Download App
+</footer>
 
 </body>
 </html>
